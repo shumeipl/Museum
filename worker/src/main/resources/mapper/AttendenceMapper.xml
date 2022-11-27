@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.workers.dao.AttendenceMapper">
+    <resultMap id="BaseResultMap" type="com.example.workers.pojo.Attendence">
+        <!--
+    private  String venue_type;
+    private  String photo;
+    private String location;
+    private  Integer workerId;
+    private Integer number;
+    private String open_time;
+        -->
+        <id column="venue_name"  property="venue_name" />
+        <result column="venue_type"  property="venue_type" />
+        <result column="location" property="location" />
+        <result column="workerId"  property="workerId" />
+        <result column="count(*)" property="number" />
+        <result column="open_time"  property="open_time" />
+    </resultMap>
+    <select id="selectNums" resultMap="BaseResultMap">
+    select  bookings.venue_name,bookings.venue_type,photo,location,worker_id,count(*),open_time from bookings,exhibits
+    where bookings.venue_id=exhibits.exhibit_id  group by bookings.venue_id;
+    </select>
+</mapper>

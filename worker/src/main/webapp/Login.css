@@ -1,0 +1,86 @@
+div>div>form>div>div>img{
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	margin-top: 10px ;
+}
+
+/* 高度大概在600px左右 */
+.all{
+	height: 550px;
+	width: 1263px;
+}
+.top{
+	height: 80px;
+}
+.left-top{
+	font-size: 35px;
+	font-family: 华文行楷;
+	font-weight: 800;
+	color: #A5342C;
+}
+.left-bottom{
+	font-size: 25px;
+	font-family: 华文琥珀;
+}
+.title{
+	padding: 10px;
+}
+.all{
+	background-image:url("博物馆images/8.jpg");
+	background-size: cover;
+}
+.right{
+	width:400px ;
+	position: fixed;
+	left: 300px;
+	left: 431.5px;
+	top: 200px;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 20px;
+}
+.login-head{
+	font-size: large;
+	font-weight: 800;
+	font-family:微软雅黑;
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	color: #A5342B;
+}
+.login-username ,.login-password{
+	width: 300px;
+	height: 40px;
+	background-color:#F0F0F0;
+	line-height: 40px;
+	border-radius: 20px;
+	margin: 20px auto;
+	display: flex;
+}
+.login-button{
+	width: 100px;
+	height: 35px;
+	border-radius: 20px;
+	background-color: #A5342B;
+	line-height: 35px;
+	color: white;
+	font-family: 微软雅黑;
+	font-size: small;
+	font-weight: 650;
+	text-align: center;
+	margin:10px auto;
+}
+input{
+	width:250px;
+	font-weight: 800;
+	font-family:微软雅黑;
+	height: 38px;
+	background-color:#F0F0F0 ;
+	box-shadow: 0px 0px 0px 0px;
+	outline: none;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}

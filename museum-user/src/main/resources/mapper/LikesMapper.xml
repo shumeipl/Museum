@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pro.controller.mapper.LikesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.pro.pojo.Likes">
+        <id column="like_id" property="likeId" />
+        <result column="collection_id" property="collectionId" />
+        <result column="collection_time" property="collectionTime" />
+        <result column="user_id" property="userId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        like_id, collection_id, collection_time, user_id
+    </sql>
+
+    <select id="getAllLikesById" resultMap="BaseResultMap">
+        select * from likes where user_id = #{userId};
+    </select>
+</mapper>

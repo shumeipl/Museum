@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pro.controller.mapper.CollectionsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.pro.pojo.Collections">
+        <id column="collection_id" property="collectionId" />
+        <result column="type" property="type" />
+        <result column="history" property="history" />
+        <result column="venue_name" property="venueName" />
+        <result column="location" property="location" />
+        <result column="profile" property="profile" />
+        <result column="clink" property="clink" />
+        <result column="year" property="year" />
+        <result column="venue_id" property="venueId" />
+        <result column="photo" property="photo" />
+        <result column="collection_name" property="collectionName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        collection_id, type, history, venue_name, location, profile, clink, year, venue_id, photo, collection_name
+    </sql>
+
+    <select id="getByType" resultMap="BaseResultMap">
+        select * from collections where type = #{type};
+    </select>
+
+    <select id="getByTypePage" resultMap="BaseResultMap">
+        select * from collections where type = #{type} limit #{currentPage},#{pageSize};
+    </select>
+
+    <select id="getCollectionById" resultMap="BaseResultMap">
+        select * from collections where collection_id = #{collectionId};
+    </select>
+
+</mapper>

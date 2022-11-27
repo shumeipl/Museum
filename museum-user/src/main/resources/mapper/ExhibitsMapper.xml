@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pro.controller.mapper.ExhibitsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.pro.pojo.Exhibits">
+        <id column="exhibit_id" property="exhibitId" />
+        <result column="exhibit_title" property="exhibitTitle" />
+        <result column="photo" property="photo" />
+        <result column="venue_id" property="venueId" />
+        <result column="content" property="content" />
+        <result column="start_time" property="startTime" />
+        <result column="people" property="people" />
+        <result column="end_time" property="endTime" />
+        <result column="state" property="state" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        exhibit_id, exhibit_title, photo, venue_id, content, start_time, people, end_time, state
+    </sql>
+    <select id="getAllExhibits" resultMap="BaseResultMap">
+        select * from exhibits;
+    </select>
+
+    <select id="getExhibitsByState" resultMap="BaseResultMap">
+        select * from exhibits where state = #{state};
+    </select>
+
+    <select id="getExhibitsByStatePage" resultMap="BaseResultMap">
+        select * from exhibits where state = #{state} limit #{currentPage},#{pageSize};
+    </select>
+
+    <select id="getExhibitById" resultMap="BaseResultMap">
+        select * from exhibits where exhibit_id = #{exhibitId};
+    </select>
+
+    <select id="getExhibitsByStateRange" resultMap="BaseResultMap">
+        select * from exhibits where state > 1;
+    </select>
+</mapper>

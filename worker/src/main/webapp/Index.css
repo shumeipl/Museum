@@ -1,0 +1,230 @@
+.html{
+    width: 1263px;
+    font-family: 微软雅黑;
+    --contentbackgroundColor:#F3F3F4;
+}
+.fixed-left{
+    height: 600px;
+    width: 220px;
+    margin-left: 5px;
+    background-color: #0C4B6A;
+    position: fixed;
+}
+.picture{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+.picture-div{
+    height: 160px;
+    width: 190px;
+    margin-left: 30px;
+}
+.all{
+    display: flex;
+}
+input{
+    background-color: #0C4B6A;
+    outline: none;
+    border: none;
+    color: white;
+    width: 100px;
+    border: 1px #0C4B6A solid;
+}
+.inputa{
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+.inputb{
+    color: whitesmoke;
+}
+.left-check{
+
+}
+table{
+    border: 1px solid gainsboro;
+    width: 85%;
+    margin: 10px auto;
+    background-color:  #F3F3F4;
+}
+tr{
+    border: 1px solid black;
+}
+thead{
+    font-weight: 800;
+}
+td{
+    border: 1px solid gainsboro;
+    align-items: center;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+}
+tr:nth-child(even) {
+
+    background-color: gainsboro;
+
+}
+.wz{
+    display: inline-block;
+    width: 90px;
+
+}
+.l1,.l2,.l3, .l4,.l5{
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: small;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+ul>li>span{
+    margin-left: 20px;
+}
+ul>.l1:hover,.l2:hover,.l3:hover, .l4:hover,.l5:hover,.l6:hover,.l7:hover{
+    background-color: #F73B01;
+}
+.l6,.l7{
+    transition: 0.6s;
+}
+.fixed-right-top{
+    background-color: beige;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    left: 225px;
+    background-color: #F3F3F4;
+    border: 1px solid gainsboro;
+}
+.login-out{
+    display: flex;
+    width: 60px;
+    height: 60%;
+    border-radius: 10px;
+    color: #8a8a8a;
+    align-items: center;
+    margin-left: 25px;
+}
+.login-out:hover{
+    background-color: snow;
+}
+.icon{
+    height:15px;
+    width: 15px;
+    margin-right: 8px;
+}
+.b{
+    align-items: center;
+    margin-left: 65%;
+}
+.arrow{
+    margin-right: 30px;
+    right: 30px;
+    height:10px;
+    width: 10px;
+    margin-left: 70px;
+}
+.fixed-right-content{
+    width: 1243px;
+    margin-left: 230px;
+    height: 600px;
+    background-color: var(--contentbackgroundColor);
+    margin-top: 52px;
+}
+tr:hover{
+    background-color: rgba(247,59,1, 0.4);
+}
+.slected{
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: small;
+    font-weight: 800;
+    background-color:#F73B01;
+}
+form>input{
+    background-color: white;
+    color: black;
+    width: 150px;
+    height: 25px;
+    border: 1px solid #0C4B6A;
+    margin-bottom: 20px;
+}
+.submit-button{
+    background-color: #0C4B6A;
+    width: 80px;
+    height: 30px;
+    font-weight: 700;
+    color: white;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.content{
+    margin-left: 30px;
+}
+.none{
+
+}
+.Search{
+    height:45px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background-color: white;
+    line-height: 45px;
+}
+.searchDisplatInfo{
+    display: flex;
+    width: 250px;
+    height: 30px;
+    margin-top: 7.5px;
+    background-color: var(--contentbackgroundColor);
+    border: 1px solid #8a8a8a;
+    color: black;
+}
+.submit{
+    width: 80px;
+    height: 30px;
+    margin-top: 7.5px;
+    border: 1px solid #8a8a8a;;
+    background-color: var(--contentbackgroundColor);
+    color: black;
+}
+.Page-bottom{
+    display: flex;
+    width: 150px;
+    height: 30px;
+    font-size: large;
+    position: fixed;
+    top:500px;
+}
+.pageNums{
+    text-align: center;
+    width: 30px;
+    border: 1px solid #8a8a8a;
+    background-color: white;
+    color: black;
+}
+.pageDec{
+    width: 30px;
+    text-align: center;
+    border: 1px solid #8a8a8a;
+    background-color: white;
+    box-shadow: 0 -2px 5px #8a8a8a;
+}
+.pageInc{
+    width: 30px;
+    text-align: center;
+    border: 1px solid #8a8a8a;
+    background-color: white;
+}
+.bottom{
+    justify-content: center;
+    margin-left: 475px;
+}

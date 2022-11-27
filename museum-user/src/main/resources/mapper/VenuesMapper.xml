@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pro.controller.mapper.VenuesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.pro.pojo.Venues">
+        <id column="venue_id" property="venueId" />
+        <result column="venue_name" property="venueName" />
+        <result column="photo" property="photo" />
+        <result column="type" property="type" />
+        <result column="location" property="location" />
+        <result column="open_time" property="openTime" />
+        <result column="work_id" property="workId" />
+        <result column="phone" property="phone" />
+        <result column="clink" property="clink" />
+        <result column="content" property="content" />
+        <result column="capacity" property="capacity" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        venue_id, venue_name, photo, type, location, open_time, work_id, phone, clink, content, capacity
+    </sql>
+
+    <select id="getAllVenues" resultMap="BaseResultMap">
+        select * from venues;
+    </select>
+
+    <select id="getVenueByName" resultMap="BaseResultMap">
+        select * from venues where venue_name = ${venueName};
+    </select>
+
+    <select id="getVenueById" resultMap="BaseResultMap">
+        select * from venues where venue_id = #{venueId};
+    </select>
+</mapper>
